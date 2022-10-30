@@ -1,6 +1,11 @@
 import { createServer, Registry, Response, Server } from 'miragejs'
 import { AnyFactories, AnyModels } from 'miragejs/-types'
 
+export interface ErrorResponse {
+  status: number
+  message: string
+}
+
 export function makeServer({ environment = 'test' } = {}) {
   let server = createServer({
     environment,
@@ -11,10 +16,10 @@ export function makeServer({ environment = 'test' } = {}) {
       this.namespace = 'api'
 
       this.get(
-        'movies',
+        '/movies',
         () => {
           // Force an error
-          return new Response(500)
+          // return new Response(500)
 
           return [
             { name: 'Revolver', score: 9.2 },
@@ -26,7 +31,7 @@ export function makeServer({ environment = 'test' } = {}) {
       )
 
       this.get(
-        'sitcoms',
+        '/sitcoms',
         () => {
           return [
             { name: 'Friends', score: 9.5 },
@@ -38,7 +43,7 @@ export function makeServer({ environment = 'test' } = {}) {
       )
 
       this.get(
-        'games',
+        '/games',
         () => {
           return [
             { name: 'Witcher', score: 10 },

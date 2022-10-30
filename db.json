@@ -1,0 +1,17 @@
+{
+  "movies": [
+    { "name": "Revolver", "score": 9.2 },
+    { "name": "Last Samurai", "score": 8.5 },
+    { "name": "Manchester By Sea", "score": 3 }
+  ],
+  "sitcoms": [
+    { "name": "Friends", "score": 9.5 },
+    { "name": "Brooklyn Nine Nine", "score": 8.5 },
+    { "name": "Super Store", "score": 8.2 }
+  ],
+  "games": [
+    { "name": "Witcher", "score": 10 },
+    { "name": "Age of Empires 2", "score": 10 },
+    { "name": "Big Bad Wolf", "score": 9.2 }
+  ]
+}
